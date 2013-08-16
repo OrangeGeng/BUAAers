@@ -1,24 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
     android:layout_width="fill_parent"
     android:layout_height="80dp"
-    android:orientation="horizontal" >
+    android:orientation="horizontal"
+    android:background="@color/main_bg" >
     <LinearLayout android:layout_height="fill_parent"
         android:layout_width="80dp"
+        android:layout_weight="4"
         android:orientation="vertical">
         <TextView android:id="@+id/publisher_tv"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:text="北京航空航天大学软件学院"
-            android:layout_gravity="center"
-            android:gravity="center"/>
-        <TextView android:id="@+id/publish_time"
-            android:layout_width="fill_parent"
-            android:layout_height="20dp"
-            android:text="2013/8/15"
+            android:textColor="@color/news_publisher"
             android:layout_gravity="center"
             android:gravity="center"
-            android:singleLine="true"/>
+            android:paddingLeft="2dp"
+            android:paddingRight="6dp"
+            android:paddingTop="2dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:background="@drawable/ywgg_name_frame" />
+        <TextView android:id="@+id/publish_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="2013/8/15"
+            android:textSize="10dp"
+            android:textColor="@color/news_publisher"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:singleLine="true"
+            android:background="@drawable/ywgg_time_frame" />
     </LinearLayout>
     
     <ImageView android:layout_width="1dp"
@@ -27,8 +40,39 @@
     
     <LinearLayout android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="vertical">
-        
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp">
+        <TextView android:id="@+id/news_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="大运村退宿通知" />
+        <TextView android:id="@+id/news_summary"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:minWidth="220dp"
+            android:singleLine="false"/>
+        <LinearLayout android:id="@+id/view_reply_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right" >
+            <TextView android:id="@+id/news_view_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ywgg_sign_viewed"
+                android:text="998"
+                android:layout_gravity="center"/>
+            <TextView android:id="@+id/news_reply_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ywgg_sign_reply"
+                android:text="56"
+                android:layout_gravity="center"/>
+        </LinearLayout>        
     </LinearLayout>
 
 </LinearLayout>

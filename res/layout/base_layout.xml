@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_height="fill_parent"
+    android:background="@color/main_bg" >
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
 
-        <include layout="@layout/topbar" />
-        <include layout="@layout/switch_bar" />
+        <include android:id="@+id/topbar"
+            layout="@layout/topbar" />
+        <include android:id="@+id/switch_bar" 
+            layout="@layout/switch_bar" />
         <LinearLayout android:id="@+id/container"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="fill_parent"
+            >
             
         </LinearLayout>
 

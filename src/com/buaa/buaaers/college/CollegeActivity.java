@@ -1,5 +1,6 @@
 package com.buaa.buaaers.college;
 
+import com.buaa.buaaers.college.view.CollegeNewsItem;
 import com.buaa.buaaers.common.BaseActivity;
 import com.buaa.buaaers.common.data.NewsData;
 import com.buaa.buaaers.common.view.CustomableListAdapter;
@@ -26,6 +27,7 @@ public class CollegeActivity extends BaseActivity {
         
         getAdapter();
         mListView.setAdapter(mAdapter);
+        mAdapter.update(getCollegeNewsData());
     }
     
     private void getAdapter() {
@@ -34,7 +36,9 @@ public class CollegeActivity extends BaseActivity {
                 
                 @Override
                 public View populate(int position, View convertView, ViewGroup parent, Object item) {
-                    return null;
+                    CollegeNewsItem newsItem = new CollegeNewsItem(CollegeActivity.this);
+                    return newsItem.getView();
+//                    return LayoutInflater.from(CollegeActivity.this).inflate(R.layout.college_news_item, null);
                 }
             });
         }
