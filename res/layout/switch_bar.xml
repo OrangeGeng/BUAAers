@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="25dp"
+    android:orientation="horizontal"
+    android:layout_gravity="center" >
+    <TextView android:id="@+id/tv1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="院务公告"
+        android:layout_weight="1"
+        android:gravity="center"/>
+    <TextView android:id="@+id/tv2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="师兄师妹"
+        android:layout_weight="1"
+        android:gravity="center"/>
+    <TextView android:id="@+id/tv3"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="院墙"
+        android:layout_weight="1"
+        android:gravity="center"/>
+    
+
+</LinearLayout>

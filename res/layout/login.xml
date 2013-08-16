@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/login_logo" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/component_margin"
+        android:layout_marginRight="@dimen/component_margin"
+        android:background="@drawable/login_input_container_bg"
+        android:orientation="vertical"
+        android:focusable="true"  
+        android:focusableInTouchMode="true" >
+
+        <!-- User Name -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="12dip"
+            android:gravity="center_vertical" >
+
+            <TextView
+                style="@style/ListTextSmall"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:text="@string/login_hint" />
+
+            <EditText
+                android:id="@+id/loginName"
+                style="@style/ListTextSmall"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size_normal"
+                android:textStyle="bold" />
+
+<!--             <com.tencent.map.common.view.AutoCompleteTextViewPlus
+                android:id="@+id/loginName"
+                style="@style/ListTextSmall"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/login_hint"
+                android:textColorHint="@color/hint" >
+            </com.tencent.map.common.view.AutoCompleteTextViewPlus> -->
+        </LinearLayout>
+
+        <!-- User Password -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="12dip" >
+
+            <TextView
+                style="@style/ListTextSmall"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:text="@string/password_hint" />
+
+            <EditText
+                android:id="@+id/loginPassword"
+                style="@style/ListTextSmall"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:password="true"
+                android:textColorHint="@color/hint" > 
+            </EditText>
+        </LinearLayout>
+
+        
+        <!-- Submit -->
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dip"
+            android:layout_marginBottom="20dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:text="@string/login"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_normal"
+            android:textColor="#ffffff"
+            android:shadowDx="0"
+			android:shadowDy="-1.2"
+			android:shadowRadius="0.1"
+            android:shadowColor="#000000"
+            android:background="@drawable/btn_login_bg" />
+    </LinearLayout>
+
+    <!-- 登录后可以使用的功能描述 -->
+
+    <!-- <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip"
+        android:gravity="center_horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/login_flag" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_description_line_1"
+            android:textColor="#7f7f7f"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout> -->
+
+</LinearLayout>
