@@ -6,14 +6,17 @@ import com.buaa.buaaers.common.data.NewsData;
 import com.buaa.buaaers.common.view.CustomableListAdapter;
 import com.buaa.buaaers.common.view.Populator;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class CollegeActivity extends BaseActivity {
+public class CollegeActivity extends BaseActivity implements OnItemClickListener{
 
     private ListView mListView;
     
@@ -27,6 +30,7 @@ public class CollegeActivity extends BaseActivity {
         
         getAdapter();
         mListView.setAdapter(mAdapter);
+        mListView.setOnItemClickListener(this);
         mAdapter.update(getCollegeNewsData());
     }
     
@@ -50,6 +54,12 @@ public class CollegeActivity extends BaseActivity {
         news.add(new NewsData());
         news.add(new NewsData());
         return news;
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+        Intent intent = new Intent(this, CollegeNewsActivity.class);
+        startActivity(intent);
     }
 	
 }

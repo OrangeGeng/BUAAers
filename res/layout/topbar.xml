@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="30dp"
-    android:background="@color/listitem_text" >
+    android:layout_height="60dp"
+    android:layout_gravity="center_vertical"
+    android:background="@drawable/ywgg_header_bg" >
 
     <ImageView
         android:id="@+id/logo_image"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:background="@android:color/white"
-        android:src="@drawable/logo" />
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="4dp"
+        android:layout_alignParentLeft="true"        
+        android:src="@drawable/ywgg_header_logo" />
 
     <ImageView
         android:id="@+id/logo_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"        
         android:layout_alignParentRight="true"
-        android:background="@android:color/white"
-        android:src="@drawable/logo" />
+        android:src="@drawable/ywgg_header_menu" />
 
 </RelativeLayout>

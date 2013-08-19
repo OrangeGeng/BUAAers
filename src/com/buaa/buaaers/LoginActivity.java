@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
@@ -15,6 +16,7 @@ public class LoginActivity extends Activity implements OnClickListener{
 	private Button mLoginBtn;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+	    requestWindowFeature(Window.FEATURE_NO_TITLE);
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.login);
 		mLoginBtn = (Button)findViewById(R.id.loginBtn);

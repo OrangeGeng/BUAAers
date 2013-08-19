@@ -22,6 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.buaa.buaaers.college.CollegeActivity"></activity>
+        <activity android:name="com.buaa.buaaers.college.CollegeNewsActivity"></activity>
     </application>
 
 </manifest>
