@@ -4,15 +4,15 @@
     android:layout_height="fill_parent" >
 
     <ImageView
-        android:id="@+id/picture_tiankong"
+        android:id="@+id/top_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:layout_marginLeft="3dp"
         android:layout_marginBottom="2dp"
-        android:src="@drawable/composer_camera" />
+        android:src="@drawable/ywgg_side_button_wo" />
 
-    <ImageView
+    <!-- <ImageView
         android:id="@+id/music"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -46,16 +46,16 @@
         android:layout_gravity="bottom"
         android:layout_marginLeft="3dp"
         android:layout_marginBottom="2dp"
-        android:src="@drawable/composer_thought" />
+        android:src="@drawable/composer_thought" /> -->
 
     <ImageView
-        android:id="@+id/with"
+        android:id="@+id/right_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:layout_marginLeft="3dp"
         android:layout_marginBottom="2dp"
-        android:src="@drawable/composer_with" />
+        android:src="@drawable/ywgg_side_button_ban" />
 
     <FrameLayout
         android:id="@+id/left_menu_bt"
@@ -64,18 +64,18 @@
         android:layout_gravity="bottom"
         android:clickable="true" >
 
-        <ImageView
+        <!-- <ImageView
             android:id="@+id/friends"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/composer_button" />
+            android:src="@drawable/composer_button" /> -->
 
         <ImageView
             android:id="@+id/myplus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"            
-            android:src="@drawable/composer_icn_plus" />
+            android:src="@drawable/ywgg_center_button_yuan" />
     </FrameLayout>
 
 </FrameLayout>
