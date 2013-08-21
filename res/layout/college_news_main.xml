@@ -38,6 +38,16 @@
                     android:singleLine="true"/>
             </LinearLayout>
         </LinearLayout>
+        <TextView android:id="@+id/college_news_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="正文"/>
+        <LinearLayout android:id="@+id/comment_container" 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            
+        </LinearLayout>
     </LinearLayout>
 
 </ScrollView>

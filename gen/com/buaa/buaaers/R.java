@@ -50,38 +50,45 @@ public final class R {
     public static final class id {
         public static final int college_news_account_image=0x7f08000c;
         public static final int college_news_account_name=0x7f08000e;
+        public static final int college_news_content=0x7f08000f;
         public static final int college_news_title=0x7f08000d;
         public static final int college_news_title_container=0x7f08000b;
+        public static final int comment_account_image=0x7f080011;
+        public static final int comment_container=0x7f080010;
+        public static final int comment_content=0x7f080013;
+        public static final int comment_time=0x7f080014;
+        public static final int comment_user_name=0x7f080012;
         public static final int container=0x7f080002;
         public static final int left_menu=0x7f080003;
-        public static final int left_menu_bt=0x7f080011;
-        public static final int loginBtn=0x7f080015;
-        public static final int loginName=0x7f080013;
-        public static final int loginPassword=0x7f080014;
-        public static final int logo_image=0x7f080018;
-        public static final int myplus=0x7f080012;
+        public static final int left_menu_bt=0x7f080017;
+        public static final int loginBtn=0x7f08001b;
+        public static final int loginName=0x7f080019;
+        public static final int loginPassword=0x7f08001a;
+        public static final int logo_image=0x7f08001e;
+        public static final int myplus=0x7f080018;
         public static final int news_reply_count=0x7f08000a;
         public static final int news_summary=0x7f080007;
         public static final int news_title=0x7f080006;
         public static final int news_view_count=0x7f080009;
         public static final int publish_time=0x7f080005;
         public static final int publisher_tv=0x7f080004;
-        public static final int right_image=0x7f080010;
+        public static final int right_image=0x7f080016;
         public static final int switch_bar=0x7f080001;
-        public static final int top_image=0x7f08000f;
+        public static final int top_image=0x7f080015;
         public static final int topbar=0x7f080000;
-        public static final int tv1=0x7f080016;
-        public static final int tv2=0x7f080017;
+        public static final int tv1=0x7f08001c;
+        public static final int tv2=0x7f08001d;
         public static final int view_reply_container=0x7f080008;
     }
     public static final class layout {
         public static final int base_layout=0x7f030000;
         public static final int college_news_item=0x7f030001;
         public static final int college_news_main=0x7f030002;
-        public static final int left_corner_view=0x7f030003;
-        public static final int login=0x7f030004;
-        public static final int switch_bar=0x7f030005;
-        public static final int topbar=0x7f030006;
+        public static final int comment_item=0x7f030003;
+        public static final int left_corner_view=0x7f030004;
+        public static final int login=0x7f030005;
+        public static final int switch_bar=0x7f030006;
+        public static final int topbar=0x7f030007;
     }
     public static final class string {
         public static final int app_name=0x7f060003;
