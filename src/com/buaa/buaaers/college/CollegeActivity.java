@@ -13,18 +13,22 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class CollegeActivity extends BaseActivity implements OnItemClickListener, LeftCornerListener{
+public class CollegeActivity extends BaseActivity implements OnItemClickListener, LeftCornerListener, OnClickListener{
 
     private ListView mListView;
     
     private CustomableListAdapter mAdapter;
+    
+    private ImageView mSwitchYwggButton, mSwitchSxsmButton;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +41,11 @@ public class CollegeActivity extends BaseActivity implements OnItemClickListener
         mListView.setOnItemClickListener(this);
         mAdapter.update(getCollegeNewsData());
         mLeftMenu.setListener(this);
+        
+        mSwitchYwggButton = (ImageView)mSwitchBar.findViewById(R.id.iv1);
+        mSwitchSxsmButton = (ImageView)mSwitchBar.findViewById(R.id.iv2);
+        mSwitchYwggButton.setOnClickListener(this);
+        mSwitchSxsmButton.setOnClickListener(this);
     }
     
     private void getAdapter() {
@@ -78,6 +87,15 @@ public class CollegeActivity extends BaseActivity implements OnItemClickListener
     @Override
     public void onAnimChaged(boolean isGoOut) {
         mLeftMenu.setCenterImage(isGoOut ? R.drawable.ywgg_center_button_yuan_pressed : R.drawable.ywgg_center_button_yuan);
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v == mSwitchSxsmButton) {
+            Log.d("gordongeng", "click the shi xiong shi mei");
+        } else if (v == mSwitchYwggButton) {
+            Log.d("gordongeng", "click the yuan wu gong gao");
+        }
     }
 	
 }

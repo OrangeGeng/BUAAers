@@ -39,9 +39,10 @@ public class LeftCornerView extends FrameLayout implements OnClickListener{
         
         mRightImage.setOnClickListener(this);
         mTopImage.setOnClickListener(this);
+        mCenterImage.setOnClickListener(this);
 	}
 	
-	public void myanimation(){
+	private void myanimation(){
     	
     	showRotateAnimation(sign);
     	if (mListener != null) {
@@ -276,6 +277,8 @@ public class LeftCornerView extends FrameLayout implements OnClickListener{
             mListener.onClickImage(RIGHT_IMAGE_INDEX);
         } else if (v == mTopImage) {
             mListener.onClickImage(TOP_IMAGE_INDEX);
+        } else if (v == mCenterImage) {
+            myanimation();
         }
     }
     

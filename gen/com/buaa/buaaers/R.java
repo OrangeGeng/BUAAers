@@ -45,7 +45,9 @@ public final class R {
         public static final int ywgg_side_button_wo=0x7f020010;
         public static final int ywgg_sign_reply=0x7f020011;
         public static final int ywgg_sign_viewed=0x7f020012;
-        public static final int ywgg_time_frame=0x7f020013;
+        public static final int ywgg_switchbar_sxsm_off=0x7f020013;
+        public static final int ywgg_switchbar_ywgg_on=0x7f020014;
+        public static final int ywgg_time_frame=0x7f020015;
     }
     public static final class id {
         public static final int college_news_account_image=0x7f08000c;
@@ -59,6 +61,8 @@ public final class R {
         public static final int comment_time=0x7f080014;
         public static final int comment_user_name=0x7f080012;
         public static final int container=0x7f080002;
+        public static final int iv1=0x7f08001c;
+        public static final int iv2=0x7f08001d;
         public static final int left_menu=0x7f080003;
         public static final int left_menu_bt=0x7f080017;
         public static final int loginBtn=0x7f08001b;
@@ -76,8 +80,6 @@ public final class R {
         public static final int switch_bar=0x7f080001;
         public static final int top_image=0x7f080015;
         public static final int topbar=0x7f080000;
-        public static final int tv1=0x7f08001c;
-        public static final int tv2=0x7f08001d;
         public static final int view_reply_container=0x7f080008;
     }
     public static final class layout {
