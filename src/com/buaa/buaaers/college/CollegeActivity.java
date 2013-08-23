@@ -1,6 +1,7 @@
 package com.buaa.buaaers.college;
 
 import com.buaa.buaaers.college.view.CollegeNewsItem;
+import com.buaa.buaaers.college.view.ShiMeiItem;
 import com.buaa.buaaers.common.BaseActivity;
 import com.buaa.buaaers.common.data.NewsData;
 import com.buaa.buaaers.common.view.CustomableListAdapter;
@@ -26,9 +27,14 @@ public class CollegeActivity extends BaseActivity implements OnItemClickListener
 
     private ListView mListView;
     
-    private CustomableListAdapter mAdapter;
+    private CustomableListAdapter mGongGaoAdapter, mShiMeiAdapter;
     
     private ImageView mSwitchYwggButton, mSwitchSxsmButton;
+    
+    /**
+     * 是否在师兄师妹界面
+     */
+    private boolean mIsShiMei = false;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,21 +42,22 @@ public class CollegeActivity extends BaseActivity implements OnItemClickListener
         mListView = new ListView(this);
         mContainer.addView(mListView);
         
-        getAdapter();
-        mListView.setAdapter(mAdapter);
+        mListView.setAdapter(getGongGaoAdapter());
         mListView.setOnItemClickListener(this);
-        mAdapter.update(getCollegeNewsData());
+        mGongGaoAdapter.update(getCollegeNewsData());
         mLeftMenu.setListener(this);
         
         mSwitchYwggButton = (ImageView)mSwitchBar.findViewById(R.id.iv1);
         mSwitchSxsmButton = (ImageView)mSwitchBar.findViewById(R.id.iv2);
         mSwitchYwggButton.setOnClickListener(this);
         mSwitchSxsmButton.setOnClickListener(this);
+        
+        mIsShiMei = false;
     }
     
-    private void getAdapter() {
-        if (mAdapter == null) {
-            mAdapter = new CustomableListAdapter(new Populator() {
+    private CustomableListAdapter getGongGaoAdapter() {
+        if (mGongGaoAdapter == null) {
+            mGongGaoAdapter = new CustomableListAdapter(new Populator() {
                 
                 @Override
                 public View populate(int position, View convertView, ViewGroup parent, Object item) {
@@ -59,11 +66,41 @@ public class CollegeActivity extends BaseActivity implements OnItemClickListener
                 }
             });
         }
+        return mGongGaoAdapter;
     }
     
+    /**
+     * 获取院务公告数据
+     * @return
+     */
     private ArrayList<NewsData> getCollegeNewsData() {
         ArrayList<NewsData> news = new ArrayList<NewsData>();
         news.add(new NewsData());
+        news.add(new NewsData());
+        news.add(new NewsData());
+        return news;
+    }
+    
+    /**
+     * 获取师兄师妹adapter
+     * @return
+     */
+    private CustomableListAdapter getShiMeiAdapter() {
+        if (mShiMeiAdapter == null) {
+            mShiMeiAdapter = new CustomableListAdapter(new Populator() {
+                
+                @Override
+                public View populate(int position, View convertView, ViewGroup parent, Object item) {
+                    ShiMeiItem newsItem = new ShiMeiItem(CollegeActivity.this);
+                    return newsItem.getView();
+                }
+            });
+        }
+        return mShiMeiAdapter;
+    }
+    
+    private ArrayList<NewsData> getShiMeiData() {
+        ArrayList<NewsData> news = new ArrayList<NewsData>();
         news.add(new NewsData());
         news.add(new NewsData());
         return news;
@@ -93,8 +130,24 @@ public class CollegeActivity extends BaseActivity implements OnItemClickListener
     public void onClick(View v) {
         if (v == mSwitchSxsmButton) {
             Log.d("gordongeng", "click the shi xiong shi mei");
+            switchContent(false);
         } else if (v == mSwitchYwggButton) {
             Log.d("gordongeng", "click the yuan wu gong gao");
+            switchContent(true);
+        }
+    }
+    
+    private void switchContent(boolean goGongGao) {
+        if (goGongGao) {
+            if (!mIsShiMei) return;
+            mListView.setAdapter(getGongGaoAdapter());
+            mGongGaoAdapter.update(getCollegeNewsData());
+            mIsShiMei = false;
+        } else {
+            if (mIsShiMei) return;
+            mListView.setAdapter(getShiMeiAdapter());
+            mShiMeiAdapter.update(getShiMeiData());
+            mIsShiMei = true;
         }
     }
 	

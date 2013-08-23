@@ -35,19 +35,23 @@ public final class R {
         public static final int ic_launcher=0x7f020006;
         public static final int login_input_container_bg=0x7f020007;
         public static final int logo=0x7f020008;
-        public static final int ywgg_center_button_yuan=0x7f020009;
-        public static final int ywgg_center_button_yuan_pressed=0x7f02000a;
-        public static final int ywgg_header_bg=0x7f02000b;
-        public static final int ywgg_header_logo=0x7f02000c;
-        public static final int ywgg_header_menu=0x7f02000d;
-        public static final int ywgg_name_frame=0x7f02000e;
-        public static final int ywgg_side_button_ban=0x7f02000f;
-        public static final int ywgg_side_button_wo=0x7f020010;
-        public static final int ywgg_sign_reply=0x7f020011;
-        public static final int ywgg_sign_viewed=0x7f020012;
-        public static final int ywgg_switchbar_sxsm_off=0x7f020013;
-        public static final int ywgg_switchbar_ywgg_on=0x7f020014;
-        public static final int ywgg_time_frame=0x7f020015;
+        public static final int main_nonelable=0x7f020009;
+        public static final int main_wanlable=0x7f02000a;
+        public static final int main_wenlable=0x7f02000b;
+        public static final int main_wulable=0x7f02000c;
+        public static final int ywgg_center_button_yuan=0x7f02000d;
+        public static final int ywgg_center_button_yuan_pressed=0x7f02000e;
+        public static final int ywgg_header_bg=0x7f02000f;
+        public static final int ywgg_header_logo=0x7f020010;
+        public static final int ywgg_header_menu=0x7f020011;
+        public static final int ywgg_name_frame=0x7f020012;
+        public static final int ywgg_side_button_ban=0x7f020013;
+        public static final int ywgg_side_button_wo=0x7f020014;
+        public static final int ywgg_sign_reply=0x7f020015;
+        public static final int ywgg_sign_viewed=0x7f020016;
+        public static final int ywgg_switchbar_sxsm_off=0x7f020017;
+        public static final int ywgg_switchbar_ywgg_on=0x7f020018;
+        public static final int ywgg_time_frame=0x7f020019;
     }
     public static final class id {
         public static final int college_news_account_image=0x7f08000c;
@@ -61,14 +65,14 @@ public final class R {
         public static final int comment_time=0x7f080014;
         public static final int comment_user_name=0x7f080012;
         public static final int container=0x7f080002;
-        public static final int iv1=0x7f08001c;
-        public static final int iv2=0x7f08001d;
+        public static final int iv1=0x7f080024;
+        public static final int iv2=0x7f080025;
         public static final int left_menu=0x7f080003;
         public static final int left_menu_bt=0x7f080017;
         public static final int loginBtn=0x7f08001b;
         public static final int loginName=0x7f080019;
         public static final int loginPassword=0x7f08001a;
-        public static final int logo_image=0x7f08001e;
+        public static final int logo_image=0x7f080026;
         public static final int myplus=0x7f080018;
         public static final int news_reply_count=0x7f08000a;
         public static final int news_summary=0x7f080007;
@@ -77,6 +81,14 @@ public final class R {
         public static final int publish_time=0x7f080005;
         public static final int publisher_tv=0x7f080004;
         public static final int right_image=0x7f080016;
+        public static final int shimei_account_image=0x7f08001c;
+        public static final int shimei_account_name=0x7f08001d;
+        public static final int shimei_reply_count=0x7f080023;
+        public static final int shimei_summary=0x7f080021;
+        public static final int shimei_time=0x7f08001e;
+        public static final int shimei_title=0x7f080020;
+        public static final int shimei_type_icon=0x7f08001f;
+        public static final int shimei_view_count=0x7f080022;
         public static final int switch_bar=0x7f080001;
         public static final int top_image=0x7f080015;
         public static final int topbar=0x7f080000;
@@ -89,8 +101,9 @@ public final class R {
         public static final int comment_item=0x7f030003;
         public static final int left_corner_view=0x7f030004;
         public static final int login=0x7f030005;
-        public static final int switch_bar=0x7f030006;
-        public static final int topbar=0x7f030007;
+        public static final int shimei_item=0x7f030006;
+        public static final int switch_bar=0x7f030007;
+        public static final int topbar=0x7f030008;
     }
     public static final class string {
         public static final int app_name=0x7f060003;
