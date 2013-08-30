@@ -44,7 +44,7 @@ public class LeftCornerView extends FrameLayout implements OnClickListener{
 	
 	private void myanimation(){
     	
-    	showRotateAnimation(sign);
+    	//showRotateAnimation(sign);
     	if (mListener != null) {
     	    mListener.onAnimChaged(!sign);
     	}
@@ -150,7 +150,7 @@ public class LeftCornerView extends FrameLayout implements OnClickListener{
     public void inAnimation(){
     	TranslateAnimation translateAnimation = new TranslateAnimation(ANIM_TRANS_DIS, 0, 0, 0);
  	   
- 	    translateAnimation.setDuration(animationTime * 10); 
+ 	    translateAnimation.setDuration(animationTime * 1); 
  	    translateAnimation.setFillAfter(true);
  	    translateAnimation.setAnimationListener(new AnimationListener() {
             
@@ -208,7 +208,7 @@ public class LeftCornerView extends FrameLayout implements OnClickListener{
  	    
  	    TranslateAnimation translateAnimation5 = new TranslateAnimation(0, 0, - ANIM_TRANS_DIS, 0);
 // 	    translateAnimation5.setInterpolator(new OvershootInterpolator());
- 	    translateAnimation5.setDuration(animationTime * 10);
+ 	    translateAnimation5.setDuration(animationTime * 1);
  	    translateAnimation5.setStartOffset(40);
  	    translateAnimation5.setFillAfter(true);
  	    translateAnimation5.setAnimationListener(new AnimationListener() {

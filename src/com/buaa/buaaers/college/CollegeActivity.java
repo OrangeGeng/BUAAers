@@ -55,6 +55,10 @@ public class CollegeActivity extends BaseActivity implements OnItemClickListener
         mIsShiMei = false;
     }
     
+    /**
+     * 获取院务公告adapter
+     * @return
+     */
     private CustomableListAdapter getGongGaoAdapter() {
         if (mGongGaoAdapter == null) {
             mGongGaoAdapter = new CustomableListAdapter(new Populator() {

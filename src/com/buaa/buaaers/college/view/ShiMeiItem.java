@@ -7,7 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 
 public class ShiMeiItem {
-private View mView;
+    
+    private View mView;
     
     private Context mContext;
     
