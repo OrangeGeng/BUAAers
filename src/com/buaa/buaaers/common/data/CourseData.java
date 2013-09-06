@@ -14,6 +14,6 @@ public class CourseData {
     public int startWeek; // 从第几周开始
     public int endWeek; // 从第几周结束
     public int weekDay; // 周几 1-7
-    
+    public String classroom;
 
 }

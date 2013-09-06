@@ -8,6 +8,7 @@ import com.buaa.buaaers.common.view.CustomableListAdapter;
 import com.buaa.buaaers.common.view.LeftCornerListener;
 import com.buaa.buaaers.common.view.LeftCornerView;
 import com.buaa.buaaers.common.view.Populator;
+import com.buaa.buaaers.me.MeActivity;
 
 import com.buaa.buaaers.R;
 import android.content.Intent;
@@ -120,6 +121,8 @@ public class CollegeActivity extends BaseActivity implements OnItemClickListener
     public void onClickImage(int index) {
         if (index == LeftCornerView.TOP_IMAGE_INDEX) {
             Log.d("gordongeng", "click the top image");
+            Intent meIntent = new Intent(this, MeActivity.class);
+            startActivity(meIntent);
         } else if (index == LeftCornerView.RIGHT_IMAGE_INDEX) {
             Log.d("gordongeng", "click the right image");
         }
@@ -144,11 +147,15 @@ public class CollegeActivity extends BaseActivity implements OnItemClickListener
     private void switchContent(boolean goGongGao) {
         if (goGongGao) {
             if (!mIsShiMei) return;
+            mSwitchYwggButton.setImageResource(R.drawable.ywgg_switchbar_ywgg_on);
+            mSwitchSxsmButton.setImageResource(R.drawable.ywgg_switchbar_sxsm_off);
             mListView.setAdapter(getGongGaoAdapter());
             mGongGaoAdapter.update(getCollegeNewsData());
             mIsShiMei = false;
         } else {
             if (mIsShiMei) return;
+            mSwitchYwggButton.setImageResource(R.drawable.ywgg_switchbar_ywgg_off);
+            mSwitchSxsmButton.setImageResource(R.drawable.ywgg_switchbar_sxsm_on);
             mListView.setAdapter(getShiMeiAdapter());
             mShiMeiAdapter.update(getShiMeiData());
             mIsShiMei = true;
