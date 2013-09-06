@@ -4,9 +4,14 @@
 package com.buaa.buaaers.me;
 
 import com.buaa.buaaers.R;
+import com.buaa.buaaers.college.CollegeActivity;
 import com.buaa.buaaers.common.BaseActivity;
+import com.buaa.buaaers.common.view.LeftCornerListener;
+import com.buaa.buaaers.common.view.LeftCornerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
@@ -15,7 +20,7 @@ import android.widget.ImageView;
  * @author gordongeng
  *
  */
-public class MeActivity extends BaseActivity implements OnClickListener{
+public class MeActivity extends BaseActivity implements OnClickListener, LeftCornerListener{
     
     private ImageView mCourseTableBtn, mMeJoinBtn;
     
@@ -38,6 +43,11 @@ public class MeActivity extends BaseActivity implements OnClickListener{
         mMeJoinBtn.setImageResource(R.drawable.me_switchbar_wcy_off);
         
         mIsMeJoin = false;
+        
+        mLeftMenu.setCenterImage(R.drawable.leftcorner_center_me);
+        mLeftMenu.setTopImage(R.drawable.leftcorner_college);
+        mLeftMenu.setRightImage(R.drawable.leftcorner_class);
+        mLeftMenu.setListener(this);
     }
     
     @Override
@@ -67,6 +77,23 @@ public class MeActivity extends BaseActivity implements OnClickListener{
             mMeJoinBtn.setImageResource(R.drawable.me_switchbar_wcy_on);
             mIsMeJoin = true;
         }
+    }
+
+    @Override
+    public void onLeftCornerClickImage(int index) {
+        if (index == LeftCornerView.TOP_IMAGE_INDEX) {
+            Log.d("gordongeng", "click the top image");
+            Intent meIntent = new Intent(this, CollegeActivity.class);
+            startActivity(meIntent);
+            onDestroy();
+        } else if (index == LeftCornerView.RIGHT_IMAGE_INDEX) {
+            Log.d("gordongeng", "click the right image");
+        }
+    }
+
+    @Override
+    public void onLeftCornerAnimChaged(boolean isGoOut) {
+        mLeftMenu.setCenterImage(isGoOut ? R.drawable.leftcorner_center_me_pressed : R.drawable.leftcorner_center_me);
     }
 
 }

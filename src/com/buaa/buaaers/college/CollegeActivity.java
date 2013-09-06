@@ -118,19 +118,20 @@ public class CollegeActivity extends BaseActivity implements OnItemClickListener
     }
 
     @Override
-    public void onClickImage(int index) {
+    public void onLeftCornerClickImage(int index) {
         if (index == LeftCornerView.TOP_IMAGE_INDEX) {
             Log.d("gordongeng", "click the top image");
             Intent meIntent = new Intent(this, MeActivity.class);
             startActivity(meIntent);
+            onDestroy();
         } else if (index == LeftCornerView.RIGHT_IMAGE_INDEX) {
             Log.d("gordongeng", "click the right image");
         }
     }
 
     @Override
-    public void onAnimChaged(boolean isGoOut) {
-        mLeftMenu.setCenterImage(isGoOut ? R.drawable.ywgg_center_button_yuan_pressed : R.drawable.ywgg_center_button_yuan);
+    public void onLeftCornerAnimChaged(boolean isGoOut) {
+        mLeftMenu.setCenterImage(isGoOut ? R.drawable.leftcorner_center_college_pressed : R.drawable.leftcorner_center_college);
     }
 
     @Override

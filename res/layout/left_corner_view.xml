@@ -10,7 +10,7 @@
         android:layout_gravity="bottom"
         android:layout_marginLeft="3dp"
         android:layout_marginBottom="2dp"
-        android:src="@drawable/ywgg_side_button_wo" />
+        android:src="@drawable/leftcorner_me" />
 
     <!-- <ImageView
         android:id="@+id/music"
@@ -55,7 +55,7 @@
         android:layout_gravity="bottom"
         android:layout_marginLeft="3dp"
         android:layout_marginBottom="2dp"
-        android:src="@drawable/ywgg_side_button_ban" />
+        android:src="@drawable/leftcorner_class" />
 
     <FrameLayout
         android:id="@+id/left_menu_bt"
@@ -75,7 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"            
-            android:src="@drawable/ywgg_center_button_yuan" />
+            android:src="@drawable/leftcorner_center_college" />
     </FrameLayout>
 
 </FrameLayout>

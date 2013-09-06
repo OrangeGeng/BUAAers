@@ -11,7 +11,7 @@
         android:layout_height="fill_parent"
         android:layout_marginLeft="4dp"
         android:layout_alignParentLeft="true"        
-        android:src="@drawable/ywgg_header_logo" />
+        android:src="@drawable/header_buaaers" />
 
     <ImageView
         android:id="@+id/logo_image"
