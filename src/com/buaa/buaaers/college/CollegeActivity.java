@@ -15,7 +15,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -24,7 +23,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class CollegeActivity extends BaseActivity implements OnItemClickListener, LeftCornerListener, OnClickListener{
+public class CollegeActivity extends BaseActivity implements OnItemClickListener, LeftCornerListener{
 
     private ListView mListView;
     
@@ -136,6 +135,7 @@ public class CollegeActivity extends BaseActivity implements OnItemClickListener
 
     @Override
     public void onClick(View v) {
+        super.onClick(v);
         if (v == mSwitchSxsmButton) {
             Log.d("gordongeng", "click the shi xiong shi mei");
             switchContent(false);
