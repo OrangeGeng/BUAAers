@@ -13,14 +13,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.ImageView;
 
 /**
  * @author gordongeng
  *
  */
-public class MeActivity extends BaseActivity implements OnClickListener, LeftCornerListener{
+public class MeActivity extends BaseActivity implements LeftCornerListener{
     
     private ImageView mCourseTableBtn, mMeJoinBtn;
     
@@ -52,6 +51,7 @@ public class MeActivity extends BaseActivity implements OnClickListener, LeftCor
     
     @Override
     public void onClick(View v) {
+        super.onClick(v);
         if (v == mCourseTableBtn) {
             switchContent(false);
         } else if (v == mMeJoinBtn) {

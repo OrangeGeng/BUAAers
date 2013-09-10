@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/menubar" >
+    
+    <!-- 帐号设置 -->
+    <ImageView android:id="@+id/menubar_account_setting"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="3dp"
+        android:src="@drawable/menubar_account_setting"
+        android:layout_gravity="center_horizontal"/>
+    <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/menubar_cutoffline"
+        android:layout_gravity="center_horizontal"/>
+    
+    <!-- 推送控制 -->
+    <ImageView android:id="@+id/menubar_push_control"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="3dp"
+        android:src="@drawable/menubar_pushcontrol"
+        android:layout_gravity="center_horizontal"/>
+    <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/menubar_cutoffline"
+        android:layout_gravity="center_horizontal"/>
+    
+    <!-- 意见反馈 -->
+    <ImageView android:id="@+id/menubar_opnion_reply"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="3dp"
+        android:src="@drawable/menubar_opnionreply"
+        android:layout_gravity="center_horizontal"/>
+    <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/menubar_cutoffline"
+        android:layout_gravity="center_horizontal"/>
+    
+    <!-- 清楚缓存 -->
+    <ImageView android:id="@+id/menubar_clear_cash"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="3dp"
+        android:src="@drawable/menubar_clearcash"
+        android:layout_gravity="center_horizontal"/>
+    <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/menubar_cutoffline"
+        android:layout_gravity="center_horizontal"/>
+    
+    <!-- 注销 -->
+    <ImageView android:id="@+id/menubar_logout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/menubar_logout"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

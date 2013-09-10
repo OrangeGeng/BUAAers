@@ -14,7 +14,7 @@
         android:src="@drawable/header_buaaers" />
 
     <ImageView
-        android:id="@+id/logo_image"
+        android:id="@+id/top_bar_menu_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"        
         android:layout_alignParentRight="true"
