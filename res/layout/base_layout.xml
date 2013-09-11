@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="top|right"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="45dp"
         android:visibility="gone" >
     </com.buaa.buaaers.common.view.TopBarMenu>
 </FrameLayout>

@@ -9,16 +9,21 @@
         android:id="@+id/logo_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="4dp"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"        
-        android:src="@drawable/header_buaaers" />
+        android:layout_alignParentLeft="true"        
+        android:background="@drawable/header_backbutton" />
+    
+    <ImageView android:id="@+id/topbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/menubar_qchcbutton" />"
+    
 
     <ImageView
-        android:id="@+id/top_bar_menu_btn"
+        android:id="@+id/top_bar_right_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"        
         android:layout_alignParentRight="true"
-        android:src="@drawable/header_menu_btn" />
+        android:src="@drawable/header_releasebutton" />
 
 </RelativeLayout>
