@@ -4,8 +4,10 @@
 package com.buaa.buaaers.common.view;
 
 import com.buaa.buaaers.R;
+import com.buaa.buaaers.setting.AccountSettingActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -18,7 +20,9 @@ import android.widget.LinearLayout;
  */
 public class TopBarMenu extends LinearLayout implements OnClickListener{
     
-    View mAccountSetting, mPushControl, mClearCash, mLogout, mOpionReply;
+    private View mAccountSetting, mPushControl, mClearCash, mLogout, mOpionReply;
+    
+    private Context mContext;
 
     /**
      * @param context
@@ -56,12 +60,16 @@ public class TopBarMenu extends LinearLayout implements OnClickListener{
         mLogout.setOnClickListener(this);
         
         view.setOnClickListener(this);
+        
+        mContext = context;
     }
 
     @Override
     public void onClick(View v) {
         if(mAccountSetting == v) {
             Log.d("gordongeng", "on click the menu item --- mAccountSetting");
+            Intent intent = new Intent(mContext, AccountSettingActivity.class);
+            mContext.startActivity(intent);
         } else if(v == mPushControl) {
             Log.d("gordongeng", "on click the menu item --- mPushControl");
         } else if(v == mClearCash) {

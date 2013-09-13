@@ -24,6 +24,7 @@
         <activity android:name="com.buaa.buaaers.college.CollegeActivity"></activity>
         <activity android:name="com.buaa.buaaers.college.CollegeNewsActivity"></activity>
         <activity android:name="com.buaa.buaaers.me.MeActivity"></activity>
+        <activity android:name="com.buaa.buaaers.setting.AccountSettingActivity"></activity>
     </application>
 
 </manifest>

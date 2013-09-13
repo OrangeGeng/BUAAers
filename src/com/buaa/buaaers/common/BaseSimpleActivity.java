@@ -6,6 +6,8 @@ package com.buaa.buaaers.common;
 import com.buaa.buaaers.R;
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -15,7 +17,7 @@ import android.widget.LinearLayout;
  * @author gordongeng
  *
  */
-public class BaseSimpleActivity extends Activity {
+public class BaseSimpleActivity extends Activity implements OnClickListener{
 
     protected LinearLayout mContainer;
     
@@ -31,5 +33,14 @@ public class BaseSimpleActivity extends Activity {
         mTopBarLogo = (ImageView)findViewById(R.id.logo_image);
         mRightBtn = (ImageView)findViewById(R.id.top_bar_right_btn);
         mTitle = (ImageView)findViewById(R.id.topbar_title);
+        
+        mTopBarLogo.setOnClickListener(this);
+    }
+    
+    @Override
+    public void onClick(View v) {
+        if(v == mTopBarLogo) {
+            onDestroy();
+        }
     }
 }
