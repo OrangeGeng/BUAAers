@@ -20,8 +20,7 @@ public class AccountSettingActivity extends BaseSimpleActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         
-        View content = LayoutInflater.from(this).inflate(R.layout.account_setting, null);
-        mContainer.addView(content);
+        View content = LayoutInflater.from(this).inflate(R.layout.account_setting, mContainer);
     }
 
 }

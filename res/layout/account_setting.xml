@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:layout_height="wrap_content"
+    android:scrollbars="none" >
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
     
     <TextView android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,5 +54,94 @@
         android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
         android:background="@color/hint" />
+    
+    
+    
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="用户名设置"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/news_title"
+        android:textSize="18dp"/>
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/account_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="橙子梗" />
+        
+        <ImageView
+            android:id="@+id/account_name_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/account_name"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/main_selectbutton" />
+    </RelativeLayout>
+    
+    <ImageView android:id="@+id/save_account_name_btn"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/main_savebutton"
+        android:layout_gravity="center_horizontal" />
+    
+    <View android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/hint" />
+    
+    
+    
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="密码设置"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/news_title"
+        android:textSize="18dp"/>
+    
+    <EditText android:id="@+id/before_password"
+        android:layout_height="40dp"
+        android:layout_width="240dp"
+        android:layout_gravity="center_horizontal"
+        android:inputType="textPassword"
+        android:layout_marginTop="10dp"
+        android:hint="请输入旧密码"/>
+    
+    <EditText android:id="@+id/new_password"
+        android:layout_height="40dp"
+        android:layout_width="240dp"
+        android:layout_gravity="center_horizontal"
+        android:inputType="textPassword"
+        android:layout_marginTop="10dp"
+        android:hint="请输入新密码"/>
+    
+    <EditText android:id="@+id/confirm_new_password"
+        android:layout_height="40dp"
+        android:layout_width="240dp"
+        android:layout_gravity="center_horizontal"
+        android:inputType="textPassword"
+        android:layout_marginTop="10dp"
+        android:hint="请再次输入新密码"/>
+    
+    <ImageView android:id="@+id/save_account_password_btn"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/main_savebutton"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp" />
 
 </LinearLayout>
+</ScrollView>
