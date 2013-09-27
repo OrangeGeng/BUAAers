@@ -40,6 +40,7 @@ public class BaseSimpleActivity extends Activity implements OnClickListener{
     @Override
     public void onClick(View v) {
         if(v == mTopBarLogo) {
+            onBackPressed();
             onDestroy();
         }
     }

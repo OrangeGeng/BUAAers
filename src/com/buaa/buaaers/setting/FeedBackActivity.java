@@ -14,14 +14,13 @@ import android.view.View;
  * @author gordongeng
  *
  */
-public class AccountSettingActivity extends BaseSimpleActivity {
-
+public class FeedBackActivity extends BaseSimpleActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         
-        LayoutInflater.from(this).inflate(R.layout.account_setting, mContainer);
+        LayoutInflater.from(this).inflate(R.layout.feedback_layout, mContainer);
         mRightBtn.setVisibility(View.GONE);
+        mTitle.setImageResource(R.drawable.menubar_pushedyjfkbutton);
     }
-
 }
