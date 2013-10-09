@@ -6,6 +6,7 @@ package com.buaa.buaaers.common.view;
 import com.buaa.buaaers.R;
 import com.buaa.buaaers.setting.AccountSettingActivity;
 import com.buaa.buaaers.setting.FeedBackActivity;
+import com.buaa.buaaers.setting.PushSettingActivity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -73,6 +74,8 @@ public class TopBarMenu extends LinearLayout implements OnClickListener{
             mContext.startActivity(intent);
         } else if(v == mPushControl) {
             Log.d("gordongeng", "on click the menu item --- mPushControl");
+            Intent intent = new Intent(mContext, PushSettingActivity.class);
+            mContext.startActivity(intent);
         } else if(v == mClearCash) {
             Log.d("gordongeng", "on click the menu item --- mClearCash");
         } else if(v == mLogout) {

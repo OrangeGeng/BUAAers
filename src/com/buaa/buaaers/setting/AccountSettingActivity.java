@@ -22,6 +22,7 @@ public class AccountSettingActivity extends BaseSimpleActivity {
         
         LayoutInflater.from(this).inflate(R.layout.account_setting, mContainer);
         mRightBtn.setVisibility(View.GONE);
+        mTitle.setImageResource(R.drawable.menubar_pushedzhszbutton);
     }
 
 }

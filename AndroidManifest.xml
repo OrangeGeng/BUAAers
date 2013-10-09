@@ -26,6 +26,7 @@
         <activity android:name="com.buaa.buaaers.me.MeActivity"></activity>
         <activity android:name="com.buaa.buaaers.setting.AccountSettingActivity"></activity>
         <activity android:name="com.buaa.buaaers.setting.FeedBackActivity"></activity>
+        <activity android:name="com.buaa.buaaers.setting.PushSettingActivity"></activity>
     </application>
 
 </manifest>

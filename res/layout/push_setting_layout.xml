@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none" >
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+    
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="院务板块"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/news_title"
+        android:textSize="18dp"/>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical" >
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/news_title"
+                android:textSize="16dp"
+                android:text="紧急通知"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical" />
+            
+            <ImageView android:id="@+id/push_jinji_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:src="@drawable/main_uncheckedsign"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp" >
+            
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/news_title"
+                android:textSize="16dp"
+                android:text="课程通知"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical" />
+            
+            <ImageView android:id="@+id/push_course_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:src="@drawable/main_uncheckedsign"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp" >
+            
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/news_title"
+                android:textSize="16dp"
+                android:text="实习通知"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical" />
+            
+            <ImageView android:id="@+id/push_shixi_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:src="@drawable/main_uncheckedsign"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp" >
+            
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/news_title"
+                android:textSize="16dp"
+                android:text="党务通知"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical" />
+            
+            <ImageView android:id="@+id/push_dangwu_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:src="@drawable/main_uncheckedsign"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp" >
+            
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/news_title"
+                android:textSize="16dp"
+                android:text="普通新闻"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical" />
+            
+            <ImageView android:id="@+id/push_commonnews_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:src="@drawable/main_uncheckedsign"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+
+    </LinearLayout>
+    
+    <View android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/hint" />
+    
+    
+    
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="班务板块"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/news_title"
+        android:textSize="18dp"/>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical" >
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/news_title"
+                android:textSize="16dp"
+                android:text="紧急通知"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical" />
+            
+            <ImageView android:id="@+id/push_classjinji_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:src="@drawable/main_uncheckedsign"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp" >
+            
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/news_title"
+                android:textSize="16dp"
+                android:text="活动安排"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical" />
+            
+            <ImageView android:id="@+id/push_classactivity_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:src="@drawable/main_uncheckedsign"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp" >
+            
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/news_title"
+                android:textSize="16dp"
+                android:text="普通通知"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical" />
+            
+            <ImageView android:id="@+id/push_classcommon_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:src="@drawable/main_uncheckedsign"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+
+    </LinearLayout>
+    
+    <View android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/hint" />
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:text="与我相关"
+            android:textColor="@color/news_title"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/push_aboutme_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="26dp"
+            android:src="@drawable/main_uncheckedsign" />
+    </LinearLayout>
+    
+</LinearLayout>
+</ScrollView>
