@@ -7,4 +7,6 @@
     <color name="news_publisher">#7a6f5b</color>
     <color name="news_title">#212121</color>
     <color name="news_title_important">#ae2618</color>
+    
+    <color name="white">#ffffff</color>
 </resources>
