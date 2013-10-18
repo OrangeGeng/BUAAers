@@ -1,6 +1,11 @@
-package com.buaa.buaaers.college;
+/**
+ * 
+ */
+package com.buaa.buaaers.buaaclass;
 
-import com.buaa.buaaers.buaaclass.ClassActivity;
+import com.buaa.buaaers.R;
+import com.buaa.buaaers.college.CollegeActivity;
+import com.buaa.buaaers.college.CollegeNewsActivity;
 import com.buaa.buaaers.college.view.CollegeNewsItem;
 import com.buaa.buaaers.college.view.ShiMeiItem;
 import com.buaa.buaaers.common.BaseActivity;
@@ -11,31 +16,35 @@ import com.buaa.buaaers.common.view.LeftCornerView;
 import com.buaa.buaaers.common.view.Populator;
 import com.buaa.buaaers.me.MeActivity;
 
-import com.buaa.buaaers.R;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.AdapterView.OnItemClickListener;
 
 import java.util.ArrayList;
 
-public class CollegeActivity extends BaseActivity implements OnItemClickListener, LeftCornerListener{
+/**
+ * @author gordongeng
+ *
+ */
+public class ClassActivity extends BaseActivity implements OnItemClickListener, LeftCornerListener{
+
 
     private ListView mListView;
     
-    private CustomableListAdapter mGongGaoAdapter, mShiMeiAdapter;
+    private CustomableListAdapter mGongGaoAdapter, mBanHuiAdapter;
     
-    private ImageView mSwitchYwggButton, mSwitchSxsmButton;
+    private ImageView mSwitchBwggButton, mSwitchZxbhButton;
     
     /**
-     * 是否在师兄师妹界面
+     * 是否在在线班会界面
      */
-    private boolean mIsShiMei = false;
+    private boolean mIsBanHui = false;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,14 +55,21 @@ public class CollegeActivity extends BaseActivity implements OnItemClickListener
         mListView.setAdapter(getGongGaoAdapter());
         mListView.setOnItemClickListener(this);
         mGongGaoAdapter.update(getCollegeNewsData());
+        
+        mLeftMenu.setCenterImage(R.drawable.leftcorner_center_class);
+        mLeftMenu.setTopImage(R.drawable.leftcorner_college);
+        mLeftMenu.setRightImage(R.drawable.leftcorner_me);
         mLeftMenu.setListener(this);
         
-        mSwitchYwggButton = (ImageView)mSwitchBar.findViewById(R.id.iv1);
-        mSwitchSxsmButton = (ImageView)mSwitchBar.findViewById(R.id.iv2);
-        mSwitchYwggButton.setOnClickListener(this);
-        mSwitchSxsmButton.setOnClickListener(this);
+        mSwitchBwggButton = (ImageView)mSwitchBar.findViewById(R.id.iv1);
+        mSwitchZxbhButton = (ImageView)mSwitchBar.findViewById(R.id.iv2);
+        mSwitchBwggButton.setOnClickListener(this);
+        mSwitchZxbhButton.setOnClickListener(this);
         
-        mIsShiMei = false;
+        mSwitchBwggButton.setImageResource(R.drawable.navbar_pushedbwgg);
+        mSwitchZxbhButton.setImageResource(R.drawable.navbar_zxbh);
+        
+        mIsBanHui = false;
     }
     
     /**
@@ -66,7 +82,7 @@ public class CollegeActivity extends BaseActivity implements OnItemClickListener
                 
                 @Override
                 public View populate(int position, View convertView, ViewGroup parent, Object item) {
-                    CollegeNewsItem newsItem = new CollegeNewsItem(CollegeActivity.this);
+                    CollegeNewsItem newsItem = new CollegeNewsItem(ClassActivity.this);
                     return newsItem.getView();
                 }
             });
@@ -75,7 +91,7 @@ public class CollegeActivity extends BaseActivity implements OnItemClickListener
     }
     
     /**
-     * 获取院务公告数据
+     * 获取班务公告数据
      * @return
      */
     private ArrayList<NewsData> getCollegeNewsData() {
@@ -87,21 +103,21 @@ public class CollegeActivity extends BaseActivity implements OnItemClickListener
     }
     
     /**
-     * 获取师兄师妹adapter
+     * 获取在线班会adapter
      * @return
      */
     private CustomableListAdapter getShiMeiAdapter() {
-        if (mShiMeiAdapter == null) {
-            mShiMeiAdapter = new CustomableListAdapter(new Populator() {
+        if (mBanHuiAdapter == null) {
+            mBanHuiAdapter = new CustomableListAdapter(new Populator() {
                 
                 @Override
                 public View populate(int position, View convertView, ViewGroup parent, Object item) {
-                    ShiMeiItem newsItem = new ShiMeiItem(CollegeActivity.this);
+                    ShiMeiItem newsItem = new ShiMeiItem(ClassActivity.this);
                     return newsItem.getView();
                 }
             });
         }
-        return mShiMeiAdapter;
+        return mBanHuiAdapter;
     }
     
     private ArrayList<NewsData> getShiMeiData() {
@@ -121,13 +137,13 @@ public class CollegeActivity extends BaseActivity implements OnItemClickListener
     public void onLeftCornerClickImage(int index) {
         if (index == LeftCornerView.TOP_IMAGE_INDEX) {
             Log.d("gordongeng", "click the top image");
-            Intent meIntent = new Intent(this, MeActivity.class);
+            Intent meIntent = new Intent(this, CollegeActivity.class);
             startActivity(meIntent);
             onDestroy();
             finish();
         } else if (index == LeftCornerView.RIGHT_IMAGE_INDEX) {
             Log.d("gordongeng", "click the right image");
-            Intent meIntent = new Intent(this, ClassActivity.class);
+            Intent meIntent = new Intent(this, MeActivity.class);
             startActivity(meIntent);
             onDestroy();
             finish();
@@ -136,16 +152,16 @@ public class CollegeActivity extends BaseActivity implements OnItemClickListener
 
     @Override
     public void onLeftCornerAnimChaged(boolean isGoOut) {
-        mLeftMenu.setCenterImage(isGoOut ? R.drawable.leftcorner_center_college_pressed : R.drawable.leftcorner_center_college);
+        mLeftMenu.setCenterImage(isGoOut ? R.drawable.leftcorner_center_class_pressed : R.drawable.leftcorner_class);
     }
 
     @Override
     public void onClick(View v) {
         super.onClick(v);
-        if (v == mSwitchSxsmButton) {
+        if (v == mSwitchZxbhButton) {
             Log.d("gordongeng", "click the shi xiong shi mei");
             switchContent(false);
-        } else if (v == mSwitchYwggButton) {
+        } else if (v == mSwitchBwggButton) {
             Log.d("gordongeng", "click the yuan wu gong gao");
             switchContent(true);
         }
@@ -153,20 +169,20 @@ public class CollegeActivity extends BaseActivity implements OnItemClickListener
     
     private void switchContent(boolean goGongGao) {
         if (goGongGao) {
-            if (!mIsShiMei) return;
-            mSwitchYwggButton.setImageResource(R.drawable.ywgg_switchbar_ywgg_on);
-            mSwitchSxsmButton.setImageResource(R.drawable.ywgg_switchbar_sxsm_off);
+            if (!mIsBanHui) return;
+            mSwitchBwggButton.setImageResource(R.drawable.navbar_pushedbwgg);
+            mSwitchZxbhButton.setImageResource(R.drawable.navbar_zxbh);
             mListView.setAdapter(getGongGaoAdapter());
             mGongGaoAdapter.update(getCollegeNewsData());
-            mIsShiMei = false;
+            mIsBanHui = false;
         } else {
-            if (mIsShiMei) return;
-            mSwitchYwggButton.setImageResource(R.drawable.ywgg_switchbar_ywgg_off);
-            mSwitchSxsmButton.setImageResource(R.drawable.ywgg_switchbar_sxsm_on);
+            if (mIsBanHui) return;
+            mSwitchBwggButton.setImageResource(R.drawable.navbar_bwgg);
+            mSwitchZxbhButton.setImageResource(R.drawable.navbar_pushedzxbh);
             mListView.setAdapter(getShiMeiAdapter());
-            mShiMeiAdapter.update(getShiMeiData());
-            mIsShiMei = true;
+            mBanHuiAdapter.update(getShiMeiData());
+            mIsBanHui = true;
         }
     }
-	
+    
 }

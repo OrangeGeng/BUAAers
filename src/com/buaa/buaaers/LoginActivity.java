@@ -26,6 +26,7 @@ public class LoginActivity extends Activity implements OnClickListener{
 		if (mLoginBtn == v) {
 			Intent intent = new Intent(this, CollegeActivity.class);
             startActivity(intent);
+            finish();
 		}
 		
 	}

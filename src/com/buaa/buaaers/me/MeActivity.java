@@ -4,6 +4,7 @@
 package com.buaa.buaaers.me;
 
 import com.buaa.buaaers.R;
+import com.buaa.buaaers.buaaclass.ClassActivity;
 import com.buaa.buaaers.college.CollegeActivity;
 import com.buaa.buaaers.common.BaseActivity;
 import com.buaa.buaaers.common.view.LeftCornerListener;
@@ -86,8 +87,13 @@ public class MeActivity extends BaseActivity implements LeftCornerListener{
             Intent meIntent = new Intent(this, CollegeActivity.class);
             startActivity(meIntent);
             onDestroy();
+            finish();
         } else if (index == LeftCornerView.RIGHT_IMAGE_INDEX) {
             Log.d("gordongeng", "click the right image");
+            Intent meIntent = new Intent(this, ClassActivity.class);
+            startActivity(meIntent);
+            onDestroy();
+            finish();
         }
     }
 
@@ -95,5 +101,12 @@ public class MeActivity extends BaseActivity implements LeftCornerListener{
     public void onLeftCornerAnimChaged(boolean isGoOut) {
         mLeftMenu.setCenterImage(isGoOut ? R.drawable.leftcorner_center_me_pressed : R.drawable.leftcorner_center_me);
     }
+
+    @Override
+    protected boolean onBackKey() {
+        return true;
+    }
+    
+    
 
 }
