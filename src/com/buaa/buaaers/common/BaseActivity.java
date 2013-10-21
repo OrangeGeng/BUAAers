@@ -2,6 +2,7 @@ package com.buaa.buaaers.common;
 
 import com.buaa.buaaers.R;
 import com.buaa.buaaers.common.view.LeftCornerView;
+import com.buaa.buaaers.common.view.RightCornerView;
 import com.buaa.buaaers.common.view.TopBarMenu;
 
 import android.app.Activity;
@@ -21,6 +22,11 @@ public class BaseActivity extends Activity implements OnClickListener{
 	 * 左下角menu
 	 */
 	protected LeftCornerView mLeftMenu;
+	
+	/**
+     * 右下角menu
+     */
+    protected RightCornerView mRightMenu;
 	
 	/**
 	 * 顶部切换页面bar
@@ -53,6 +59,7 @@ public class BaseActivity extends Activity implements OnClickListener{
 	    super.onCreate(savedInstanceState);
 		setContentView(R.layout.base_layout);		
 		mLeftMenu = (LeftCornerView)findViewById(R.id.left_menu);
+		mRightMenu = (RightCornerView)findViewById(R.id.right_menu);
 		
         mSwitchBar = (LinearLayout)findViewById(R.id.switch_bar);
 		mContainer = (LinearLayout)findViewById(R.id.container);
@@ -84,26 +91,28 @@ public class BaseActivity extends Activity implements OnClickListener{
     }
     
     protected boolean onBackKey() {
-        return false;
+        showExitDialog();
+        return true;
     }
-    
+
     private void showExitDialog() {
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
         dialog.setTitle("退出");
         dialog.setMessage("是否要退出BUAAers");
-        dialog.setPositiveButton("", new DialogInterface.OnClickListener() {
-         @Override
-         public void onClick(DialogInterface dialog, int which) {
-          finish(); 
-         }
+        dialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
         });
-        
-        dialog.setNegativeButton(R.string.no, new DialogInterface.OnClickListener(){
-         @Override
-         public void onClick(DialogInterface dialog, int which) {
-         
-         }
+
+        dialog.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
         });
-        
+        dialog.show();
+
     }
 }

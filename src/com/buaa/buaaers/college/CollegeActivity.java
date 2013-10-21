@@ -9,6 +9,7 @@ import com.buaa.buaaers.common.view.CustomableListAdapter;
 import com.buaa.buaaers.common.view.LeftCornerListener;
 import com.buaa.buaaers.common.view.LeftCornerView;
 import com.buaa.buaaers.common.view.Populator;
+import com.buaa.buaaers.common.view.RightCornerListener;
 import com.buaa.buaaers.me.MeActivity;
 
 import com.buaa.buaaers.R;
@@ -24,7 +25,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class CollegeActivity extends BaseActivity implements OnItemClickListener, LeftCornerListener{
+public class CollegeActivity extends BaseActivity implements OnItemClickListener, LeftCornerListener, RightCornerListener{
 
     private ListView mListView;
     
@@ -47,6 +48,8 @@ public class CollegeActivity extends BaseActivity implements OnItemClickListener
         mListView.setOnItemClickListener(this);
         mGongGaoAdapter.update(getCollegeNewsData());
         mLeftMenu.setListener(this);
+        mRightMenu.setListener(this);
+        mRightMenu.setMiddleNum(1);
         
         mSwitchYwggButton = (ImageView)mSwitchBar.findViewById(R.id.iv1);
         mSwitchSxsmButton = (ImageView)mSwitchBar.findViewById(R.id.iv2);
@@ -167,6 +170,18 @@ public class CollegeActivity extends BaseActivity implements OnItemClickListener
             mShiMeiAdapter.update(getShiMeiData());
             mIsShiMei = true;
         }
+    }
+
+    @Override
+    public void onRightCornerClickImage(int index) {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public void onRightCornerAnimChaged(boolean isGoOut) {
+        // TODO Auto-generated method stub
+        
     }
 	
 }
