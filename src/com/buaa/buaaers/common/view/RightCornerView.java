@@ -257,7 +257,7 @@ public class RightCornerView extends FrameLayout implements OnClickListener{
     }
     
     public void inAnimation(){
-    	TranslateAnimation translateAnimation = new TranslateAnimation(0, ANIM_TRANS_DIS, 0, 0);
+    	TranslateAnimation translateAnimation = new TranslateAnimation(-ANIM_TRANS_DIS, 0, 0, 0);
  	   
  	    translateAnimation.setDuration(animationTime * 1); 
  	    translateAnimation.setFillAfter(true);
@@ -315,7 +315,7 @@ public class RightCornerView extends FrameLayout implements OnClickListener{
 // 	    translateAnimation4.setFillAfter(true); 
 // 	    thoughtImage.startAnimation(translateAnimation4);
  	    
- 	    TranslateAnimation translateAnimation5 = new TranslateAnimation(0, 0, 0, ANIM_TRANS_DIS);
+ 	    TranslateAnimation translateAnimation5 = new TranslateAnimation(0, 0, -ANIM_TRANS_DIS, 0);
 // 	    translateAnimation5.setInterpolator(new OvershootInterpolator());
  	    translateAnimation5.setDuration(animationTime * 1);
  	    translateAnimation5.setStartOffset(40);
@@ -354,7 +354,7 @@ public class RightCornerView extends FrameLayout implements OnClickListener{
            detY = (int)(0.5f * ANIM_TRANS_DIS);
        }
        
-       TranslateAnimation translateAnimation1 = new TranslateAnimation(0, detX, 0, detY);
+       TranslateAnimation translateAnimation1 = new TranslateAnimation(-detX, 0, -detY, 0);
 //       translateAnimation1.setInterpolator(new OvershootInterpolator());
        translateAnimation1.setDuration(animationTime * 1); 
        translateAnimation1.setFillAfter(true);
@@ -387,7 +387,7 @@ public class RightCornerView extends FrameLayout implements OnClickListener{
        detY2 = (int)(0.866f * ANIM_TRANS_DIS);
        detX2 = (int)(0.5f * ANIM_TRANS_DIS);
        
-       TranslateAnimation translateAnimation2 = new TranslateAnimation(0, detX2, 0, detY2);
+       TranslateAnimation translateAnimation2 = new TranslateAnimation(-detX2, 0, -detY2, 0);
 //       translateAnimation2.setInterpolator(new OvershootInterpolator());
        translateAnimation2.setDuration(animationTime * 1); 
        translateAnimation2.setFillAfter(true);
@@ -441,12 +441,20 @@ public class RightCornerView extends FrameLayout implements OnClickListener{
         mTopImage.setImageResource(topId);
     }
     
-    public void setRightImage(int rightId) {
+    public void setLeftImage(int rightId) {
         mLeftImage.setImageResource(rightId);
     }
     
     public void setCenterImage(int centerId) {
         mCenterImage.setImageResource(centerId);
+    }
+    
+    public void setMiddleImage(ArrayList<Integer> imageList) {
+        if (imageList == null || imageList.size() != mImages.size())
+            return;
+        for (int i = 0; i < imageList.size(); i++) {
+            mImages.get(i).setImageResource(imageList.get(i));
+        }
     }
 
     @Override

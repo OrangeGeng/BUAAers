@@ -49,7 +49,7 @@ public class CollegeActivity extends BaseActivity implements OnItemClickListener
         mGongGaoAdapter.update(getCollegeNewsData());
         mLeftMenu.setListener(this);
         mRightMenu.setListener(this);
-        mRightMenu.setMiddleNum(1);
+        mRightMenu.setMiddleNum(2);
         
         mSwitchYwggButton = (ImageView)mSwitchBar.findViewById(R.id.iv1);
         mSwitchSxsmButton = (ImageView)mSwitchBar.findViewById(R.id.iv2);
@@ -180,8 +180,7 @@ public class CollegeActivity extends BaseActivity implements OnItemClickListener
 
     @Override
     public void onRightCornerAnimChaged(boolean isGoOut) {
-        // TODO Auto-generated method stub
-        
+        mRightMenu.setCenterImage(isGoOut ? R.drawable.rightcorner_center_pushedshaibutton : R.drawable.rightcorner_center_shaibutton);
     }
 	
 }
