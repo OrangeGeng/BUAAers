@@ -4,4 +4,51 @@
         <item name="android:textSize">@dimen/text_size_small</item>
         <item name="android:textColor">@color/listitem_text</item>
     </style>
+    
+    <style name="Dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:layout_width">@dimen/dialog_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">@dimen/dialog_width</item>
+        <item name="android:maxHeight">@dimen/dialog_width</item>
+        <item name="android:gravity">center</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/main_bg</item>
+    </style>
+    
+    <style name="Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/button_text</item>
+        <item name="android:textColor">@color/button_text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">7dip</item>
+        <item name="android:paddingBottom">7dip</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@drawable/btn_bg</item>
+    </style>
+    
+    <style name="DialogButton" parent="Button">
+        <item name="android:textSize">@dimen/text_size_big</item>
+        <item name="android:textColor">@color/button_txt</item>
+        <item name="android:minWidth">@dimen/btn_width_4text</item>
+        <item name="android:padding">@dimen/component_edge_margin_small</item>
+    </style>
+    
+    <style name="ListItem">
+        
+        <item name="android:paddingLeft">@dimen/common_page_edge_padding</item>
+        <item name="android:paddingRight">@dimen/common_page_edge_padding</item>
+        <item name="android:minHeight">@dimen/listitem_height</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/listitem_height</item>
+    </style>
+    
+    <style name="ListTextBig">
+        <item name="android:textSize">@dimen/text_size_big</item>
+        <item name="android:textColor">@color/title</item>
+    </style>
 </resources>

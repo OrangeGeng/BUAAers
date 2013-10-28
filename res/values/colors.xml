@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="page_bg">#ffffff</color>
     <color name="listitem_text">#999999</color>
+    <color name="list_item_divider">#c5c5c5</color>
     <color name="hint">#999999</color>
+    <color name="title">#333333</color>
     
     <color name="main_bg">#f1eee9</color>
     <color name="news_publisher">#7a6f5b</color>
@@ -9,4 +12,9 @@
     <color name="news_title_important">#ae2618</color>
     
     <color name="white">#ffffff</color>
+    
+    <color name="des">#666666</color>
+    
+    <color name="dialog_body">#ffffff</color>
+    <color name="button_txt">#2e7be4</color>
 </resources>

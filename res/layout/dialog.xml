@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Dialog"
+    android:layout_gravity="center"
+    android:background="@color/main_bg"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dialog_content_margin"
+    android:paddingRight="@dimen/dialog_content_margin" >
+
+    <!-- top part -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <!-- dialog title -->
+
+        <include
+            android:id="@+id/dialog_title"
+            layout="@layout/dialog_title" />
+
+        <!-- content view -->
+        <LinearLayout
+            android:id="@+id/content_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dialog_body"
+            android:gravity="center"
+            android:minHeight="@dimen/dialog_body_height"/>
+    </LinearLayout>
+
+    <!-- bottom part -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/component_edge_margin"
+        android:gravity="center"
+        android:paddingLeft="@dimen/component_edge_margin_small"
+        android:paddingRight="@dimen/component_edge_margin_small" >
+
+        <!-- 确定按钮 -->
+
+        <Button
+            android:id="@+id/button_positive"
+            style="@style/DialogButton"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:text="确定" />
+
+        <!-- 取消按钮 -->
+
+        <Button
+            android:id="@+id/button_negative"
+            style="@style/DialogButton"
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:text="取消" />
+    </LinearLayout>
+
+</LinearLayout>

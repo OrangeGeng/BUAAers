@@ -13,6 +13,7 @@
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"        
         android:src="@drawable/header_buaaers" />
+    
 
     <ImageView
         android:id="@+id/top_bar_menu_btn"
@@ -20,5 +21,13 @@
         android:layout_height="wrap_content"        
         android:layout_alignParentRight="true"
         android:src="@drawable/header_menu_btn" />
+    
+    <ImageView 
+        android:id="@+id/release_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/top_bar_menu_btn"
+        android:src="@drawable/header_releasebutton"/>
 
 </RelativeLayout>

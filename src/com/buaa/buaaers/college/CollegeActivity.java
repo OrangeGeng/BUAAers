@@ -55,6 +55,7 @@ public class CollegeActivity extends BaseActivity implements OnItemClickListener
         mSwitchSxsmButton = (ImageView)mSwitchBar.findViewById(R.id.iv2);
         mSwitchYwggButton.setOnClickListener(this);
         mSwitchSxsmButton.setOnClickListener(this);
+        mReleaseBtn.setOnClickListener(this);
         
         mIsShiMei = false;
     }
@@ -151,6 +152,8 @@ public class CollegeActivity extends BaseActivity implements OnItemClickListener
         } else if (v == mSwitchYwggButton) {
             Log.d("gordongeng", "click the yuan wu gong gao");
             switchContent(true);
+        } else if (v == mReleaseBtn) {
+            
         }
     }
     

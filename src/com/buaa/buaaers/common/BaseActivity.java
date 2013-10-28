@@ -53,6 +53,11 @@ public class BaseActivity extends Activity implements OnClickListener{
      */
     protected TopBarMenu mTopBarMenu;
     
+    /**
+     * 发布按钮
+     */
+    protected ImageView mReleaseBtn;
+    
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 	    requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -68,6 +73,8 @@ public class BaseActivity extends Activity implements OnClickListener{
 		mTopBarMenuBtn = (ImageView)findViewById(R.id.top_bar_menu_btn);
 		mTopBarMenuBtn.setOnClickListener(this);
 		mTopBarMenu = (TopBarMenu)findViewById(R.id.top_bar_menu);
+		
+		mReleaseBtn = (ImageView)findViewById(R.id.release_btn);
 	}
 	
     @Override

@@ -5,4 +5,31 @@
     
     <dimen name="text_size_normal">16dip</dimen>
     <dimen name="text_size_small">14dip</dimen>
+    <dimen name="text_size_big">18dip</dimen>
+    
+    <dimen name="button_text">14dp</dimen>
+    
+    <dimen name="listitem_height">58dp</dimen>
+    
+    <!-- 一般页边距 -->
+    <dimen name="common_page_edge_padding">12dp</dimen>
+    <!-- 控件间间距 -->
+    <dimen name="component_margin_min">4dp</dimen>
+    <dimen name="component_margin_big">16dp</dimen>
+    <!-- 控件与页的边距 -->
+    <dimen name="component_edge_margin_small">4dp</dimen>
+    <dimen name="component_edge_margin">6dp</dimen>
+    <dimen name="component_edge_margin_big">8dp</dimen>
+    <!-- 段落间间距 -->
+    <dimen name="section_margin">10dp</dimen>
+    <dimen name="section_margin_small">2dp</dimen>
+    
+    <!-- dialog -->
+    <dimen name="dialog_width">280dip</dimen>
+    <dimen name="dialog_min_hei">280dip</dimen>
+    <dimen name="dialog_body_height">80dip</dimen>
+    <dimen name="dialog_btn_margin">20dp</dimen>
+    <dimen name="btn_width_4text">100dp</dimen>
+    <dimen name="dialog_content_margin">5dip</dimen>
+    <dimen name="speak_circle_radius">50dp</dimen>
 </resources>
