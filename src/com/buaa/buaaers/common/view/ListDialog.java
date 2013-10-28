@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 
-import java.util.List;
+import java.util.ArrayList;
 
 
 /**
@@ -52,7 +52,7 @@ public class ListDialog extends CustomerDialog {
      * 
      * @param list
      */
-    public void setList(final String[] list) {
+    public void setList(final ArrayList<Integer> list) {
         // 设置adapter
         CustomableListAdapter adapter = new CustomableListAdapter(new Populator() {
 
@@ -63,8 +63,8 @@ public class ListDialog extends CustomerDialog {
                     convertView = inflater.inflate(R.layout.listitem_textview, null);
                 }
 
-                TextView tv = (TextView)convertView.findViewById(R.id.tv);
-                tv.setText(list[position]);
+                ImageView tv = (ImageView)convertView.findViewById(R.id.iv);
+                tv.setImageResource(list.get(position));
 
                 return convertView;
             }
@@ -75,33 +75,6 @@ public class ListDialog extends CustomerDialog {
         listView.setAdapter(adapter);
     }
 
-    /**
-     * 设置列表文字和图标
-     * 
-     * @param list
-     * @param icons
-     */
-    public void setList(final List<String> list) {
-        // 设置adapter
-        CustomableListAdapter adapter = new CustomableListAdapter(list, new Populator() {
-
-            @Override
-            public View populate(int position, View convertView, ViewGroup parent, Object item) {
-                if (convertView == null) {
-                    LayoutInflater inflater = LayoutInflater.from(context);
-                    convertView = inflater.inflate(R.layout.listitem_textview, null);
-                    
-                }
-
-                TextView tv = (TextView)convertView.findViewById(R.id.tv);
-                tv.setText(list.get(position));
-
-                return convertView;
-            }
-        });
-
-        listView.setAdapter(adapter);
-    }
 
     /**
      * 设置列表适配器

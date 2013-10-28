@@ -8,6 +8,7 @@ import com.buaa.buaaers.common.data.NewsData;
 import com.buaa.buaaers.common.view.CustomableListAdapter;
 import com.buaa.buaaers.common.view.LeftCornerListener;
 import com.buaa.buaaers.common.view.LeftCornerView;
+import com.buaa.buaaers.common.view.ListDialog;
 import com.buaa.buaaers.common.view.Populator;
 import com.buaa.buaaers.common.view.RightCornerListener;
 import com.buaa.buaaers.me.MeActivity;
@@ -153,10 +154,30 @@ public class CollegeActivity extends BaseActivity implements OnItemClickListener
             Log.d("gordongeng", "click the yuan wu gong gao");
             switchContent(true);
         } else if (v == mReleaseBtn) {
-            
+            showReleaseDialog();
         }
     }
     
+    private void showReleaseDialog() {
+        ListDialog showDialog = new ListDialog(this);
+        showDialog.setTitle("请选择帖子类型");
+        //int[] imageId = {R.drawable.normaltopicbutton, R.drawable.wentopicbutton, R.drawable.wantopicbutton, R.drawable.wutopicbutton};
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        list.add(R.drawable.normaltopicbutton);
+        list.add(R.drawable.wentopicbutton);
+        list.add(R.drawable.wantopicbutton);
+        list.add(R.drawable.wutopicbutton);
+        
+        showDialog.setList(list);
+        showDialog.setOnItemClickListener(new OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+                
+            }
+        });
+        showDialog.show();
+    }
     private void switchContent(boolean goGongGao) {
         if (goGongGao) {
             if (!mIsShiMei) return;

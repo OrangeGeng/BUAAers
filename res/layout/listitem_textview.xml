@@ -6,9 +6,16 @@
     android:paddingLeft="@dimen/common_page_edge_padding"
     android:paddingRight="@dimen/common_page_edge_padding" >
 
-    <TextView
+    <!-- <TextView
         android:id="@+id/tv"
         style="@style/ListTextBig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/component_edge_margin"
+        android:layout_marginTop="@dimen/component_edge_margin" /> -->
+    
+    <ImageView
+        android:id="@+id/iv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/component_edge_margin"
