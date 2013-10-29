@@ -4,6 +4,7 @@ import com.buaa.buaaers.buaaclass.ClassActivity;
 import com.buaa.buaaers.college.view.CollegeNewsItem;
 import com.buaa.buaaers.college.view.ShiMeiItem;
 import com.buaa.buaaers.common.BaseActivity;
+import com.buaa.buaaers.common.ReleaseActivity;
 import com.buaa.buaaers.common.data.NewsData;
 import com.buaa.buaaers.common.view.CustomableListAdapter;
 import com.buaa.buaaers.common.view.LeftCornerListener;
@@ -173,7 +174,8 @@ public class CollegeActivity extends BaseActivity implements OnItemClickListener
 
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-                
+                Intent meIntent = new Intent(CollegeActivity.this, ReleaseActivity.class);
+                startActivity(meIntent);
             }
         });
         showDialog.show();

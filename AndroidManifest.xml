@@ -28,6 +28,7 @@
         <activity android:name="com.buaa.buaaers.setting.FeedBackActivity"></activity>
         <activity android:name="com.buaa.buaaers.setting.PushSettingActivity"></activity>
         <activity android:name="com.buaa.buaaers.buaaclass.ClassActivity"></activity>
+        <activity android:name="com.buaa.buaaers.common.ReleaseActivity"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/common_page_edge_padding"
+        android:layout_marginRight="@dimen/common_page_edge_padding"
+        android:layout_marginTop="@dimen/common_page_edge_padding" >
+
+        <ImageView
+            android:id="@+id/account_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/example_acount_image" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/component_margin" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tiezi_type"
+                android:layout_marginTop="@dimen/component_margin"
+                
+                android:text="帖子类型" />
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/account_name"
+                android:layout_marginTop="@dimen/component_margin"
+                
+                android:text="用户名abc" />
+            
+        </LinearLayout>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/common_page_edge_padding"
+        android:layout_marginRight="@dimen/common_page_edge_padding"
+        android:layout_marginTop="@dimen/common_page_edge_padding" >
+    
+    <View android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/hint" />
+    
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/component_margin"
+        android:text="标题"/>
+    
+    <EditText 
+        android:id="@+id/tiezi_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/component_margin"
+        android:singleLine="true" />
+    
+    <View android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/hint" />
+    
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/component_margin"
+        android:text="正文内容"/>
+    
+    <EditText 
+        android:id="@+id/tiezi_content"
+        android:layout_marginTop="@dimen/component_margin"
+        android:layout_width="fill_parent"
+        android:layout_height="170dp"
+        android:singleLine="false" />
+    
+    <ImageView 
+        android:id="@+id/tiezi_submit"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/component_margin"
+        android:layout_gravity="right"
+        android:src="@drawable/main_releasebutton" />
+    
+    </LinearLayout>
+
+</LinearLayout>
