@@ -29,7 +29,7 @@ public class RightCornerView extends FrameLayout implements OnClickListener{
     public static final int RIGHT_IMAGE_INDEX = 1;
     public static final int TOP_IMAGE_INDEX = 2;
     public static final int THIRD_IMAGE_INDEX = 3;
-    public static final int FORTH_IMAGE_INDEX = 3;
+    public static final int FORTH_IMAGE_INDEX = 4;
     
     public static final int ANIM_TRANS_DIS = 120;
 

@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/tiezi_type"
                 android:layout_marginTop="@dimen/component_margin"
-                
+                style="@style/ListTextBig"
                 android:text="帖子类型" />
             
             <TextView
@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/account_name"
                 android:layout_marginTop="@dimen/component_margin"
-                
+                style="@style/ListTextSmall"
                 android:text="用户名abc" />
             
         </LinearLayout>
@@ -63,6 +63,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/component_margin"
+        style="@style/ListTextBig"
         android:text="标题"/>
     
     <EditText 
@@ -83,6 +84,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/component_margin"
+        style="@style/ListTextBig"
         android:text="正文内容"/>
     
     <EditText 
@@ -90,6 +92,7 @@
         android:layout_marginTop="@dimen/component_margin"
         android:layout_width="fill_parent"
         android:layout_height="170dp"
+        android:gravity="top"
         android:singleLine="false" />
     
     <ImageView 

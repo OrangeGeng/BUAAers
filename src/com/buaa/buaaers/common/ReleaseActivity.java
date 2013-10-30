@@ -20,7 +20,7 @@ public class ReleaseActivity extends BaseSimpleActivity {
         mRightBtn.setVisibility(View.GONE);
         mTitle.setVisibility(View.GONE);
         
-        View content = LayoutInflater.from(this).inflate(R.layout.release_content, null);
-        mContainer.addView(content);
+        View content = LayoutInflater.from(this).inflate(R.layout.release_content, mContainer);
+//        mContainer.addView(content);
     }
 }
