@@ -6,9 +6,11 @@ import com.buaa.buaaers.common.view.CommentItemView;
 import com.buaa.buaaers.common.view.RightCornerListener;
 import com.buaa.buaaers.common.view.RightCornerView;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.LinearLayout;
 
 public class CollegeNewsActivity extends BaseSimpleActivity implements RightCornerListener{
@@ -16,6 +18,7 @@ public class CollegeNewsActivity extends BaseSimpleActivity implements RightCorn
     private LinearLayout mCommentCotainer;
     
     private boolean mIsLikeThisNews = false;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +47,6 @@ public class CollegeNewsActivity extends BaseSimpleActivity implements RightCorn
         mRightCornerMenu.setListener(this);
         mRightCornerMenu.setCenterImage(R.drawable.rightcorner_center_centerbutton);
         mRightCornerMenu.setTopImage(R.drawable.rightcorner_side_replybutton);
-        mRightCornerMenu.setLeftImage(R.drawable.rightcorner_side_likebutton);
         
         mIsLikeThisNews = getIsLikeThisNews();
         if (mIsLikeThisNews) {
@@ -53,6 +55,27 @@ public class CollegeNewsActivity extends BaseSimpleActivity implements RightCorn
             mRightCornerMenu.setLeftImage(R.drawable.rightcorner_side_likebutton);
         }
     }
+    
+//    private void buildHandler() {
+//        mHandler = new Handler() {
+//
+//            @Override
+//            public void handleMessage(Message msg) {
+//                switch (msg.what) {
+//                    case MessageFactory.MESSAGE_CHANG_LIKEICON:
+//                        mRightCornerMenu.setShowImageView();
+//                        if (mIsLikeThisNews) {
+//                            mRightCornerMenu.setLeftImage(R.drawable.rightcorner_side_pushedlikebutton);
+//                        } else {
+//                            mRightCornerMenu.setLeftImage(R.drawable.rightcorner_side_likebutton);
+//                        }
+//                        
+//                        break;
+//                }
+//            }
+//            
+//        };
+//    }
 
     @Override
     public void onRightCornerClickImage(int index) {
@@ -60,14 +83,20 @@ public class CollegeNewsActivity extends BaseSimpleActivity implements RightCorn
             // 评论
             mReleaseCommentContainer.setVisibility(View.VISIBLE);
             mReleaseCommentInput.requestFocus();
+            showOrHideInput(true);
+            mRightCornerMenu.setVisibility(View.INVISIBLE);
+            mRightCornerMenu.inAnimation();
+            mRightCornerMenu.sign = false;
+            mRightCornerMenu.setCenterImage(R.drawable.rightcorner_center_centerbutton);
+            
         } else if (index == RightCornerView.RIGHT_IMAGE_INDEX) {
             // 喜欢本帖
             mIsLikeThisNews = !mIsLikeThisNews;
-            if (mIsLikeThisNews) {
-                mRightCornerMenu.setLeftImage(R.drawable.rightcorner_side_pushedlikebutton);
-            } else {
-                mRightCornerMenu.setLeftImage(R.drawable.rightcorner_side_likebutton);
-            }
+            //mHandler.sendEmptyMessage(MessageFactory.MESSAGE_CHANG_LIKEICON);
+            mRightCornerMenu.inAnimation();
+            mRightCornerMenu.sign = false;
+            mRightCornerMenu.setCenterImage(R.drawable.rightcorner_center_centerbutton);
+            //mRightCornerMenu.requestLayout();
         }
     }
 
@@ -89,6 +118,23 @@ public class CollegeNewsActivity extends BaseSimpleActivity implements RightCorn
         super.onClick(v);
         if (v == mReleaseCommentBtn) {
             mReleaseCommentContainer.setVisibility(View.GONE);
+            showOrHideInput(false);
+            mRightCornerMenu.setVisibility(View.VISIBLE);
+        }
+    }
+    
+    /**
+     * 收起或展开软键盘
+     * @param isOpen
+     */
+    private void showOrHideInput(boolean isOpen) {
+        InputMethodManager input;
+        input = (InputMethodManager)CollegeNewsActivity.this.getSystemService(Context.INPUT_METHOD_SERVICE);
+        if (isOpen) {
+            input.showSoftInput(mReleaseCommentInput, InputMethodManager.SHOW_IMPLICIT);
+        } else {
+            input.hideSoftInputFromWindow(mReleaseCommentInput.getWindowToken(),
+                    InputMethodManager.HIDE_NOT_ALWAYS);
         }
     }
     

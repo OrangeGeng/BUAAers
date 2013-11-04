@@ -37,7 +37,7 @@ public class RightCornerView extends FrameLayout implements OnClickListener{
 	
 	ArrayList<ImageView> mImages;
 	
-	boolean sign = false;
+	public boolean sign = false;
 	
 	static final int animationTime = 100;
 	
@@ -97,6 +97,7 @@ public class RightCornerView extends FrameLayout implements OnClickListener{
     }
 	
     public void outAnimation(){
+        requestLayout();
     	TranslateAnimation translateAnimation = new TranslateAnimation(0, - ANIM_TRANS_DIS, 0, 0);
  	    translateAnimation.setInterpolator(new OvershootInterpolator());
  	    translateAnimation.setDuration(animationTime * 1); 
@@ -105,7 +106,6 @@ public class RightCornerView extends FrameLayout implements OnClickListener{
            
            @Override
            public void onAnimationStart(Animation animation) {
-               
            }
            
            @Override
@@ -257,6 +257,7 @@ public class RightCornerView extends FrameLayout implements OnClickListener{
     }
     
     public void inAnimation(){
+        requestLayout();
     	TranslateAnimation translateAnimation = new TranslateAnimation(-ANIM_TRANS_DIS, 0, 0, 0);
  	   
  	    translateAnimation.setDuration(animationTime * 1); 
@@ -416,6 +417,65 @@ public class RightCornerView extends FrameLayout implements OnClickListener{
        mImages.get(1).startAnimation(translateAnimation2);
     }
     
+    public void inAnimationTrue() {
+        sign = false;
+        
+        TranslateAnimation translateAnimation = new TranslateAnimation(0, ANIM_TRANS_DIS, 0, 0);
+        
+        translateAnimation.setDuration(animationTime * 1); 
+        translateAnimation.setFillAfter(true);
+        translateAnimation.setAnimationListener(new AnimationListener() {
+            
+            @Override
+            public void onAnimationStart(Animation animation) {
+                
+            }
+            
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+                
+            }
+            
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                int top = mLeftImage.getTop();
+                int left = mLeftImage.getLeft();
+                int width = mLeftImage.getWidth();
+                int height = mLeftImage.getHeight();
+                mLeftImage.clearAnimation();
+                mLeftImage.layout(left + ANIM_TRANS_DIS, top, left + width + ANIM_TRANS_DIS, top + height);
+            }
+        });
+        mLeftImage.startAnimation(translateAnimation); 
+        
+        TranslateAnimation translateAnimation5 = new TranslateAnimation(0, 0, 0, ANIM_TRANS_DIS);
+        translateAnimation5.setDuration(animationTime * 1);
+        translateAnimation5.setStartOffset(40);
+        translateAnimation5.setFillAfter(true);
+        translateAnimation5.setAnimationListener(new AnimationListener() {
+           
+           @Override
+           public void onAnimationStart(Animation animation) {
+               
+           }
+           
+           @Override
+           public void onAnimationRepeat(Animation animation) {
+               
+           }
+           
+           @Override
+           public void onAnimationEnd(Animation animation) {
+               int top = mTopImage.getTop();
+               int left = mTopImage.getLeft();
+               int width = mTopImage.getWidth();
+               int height = mTopImage.getHeight();
+               mTopImage.clearAnimation();
+               mTopImage.layout(left, top + ANIM_TRANS_DIS, left + width, top + height + ANIM_TRANS_DIS);
+           }
+        });
+        mTopImage.startAnimation(translateAnimation5);
+    }
     
     public void showRotateAnimation(boolean sign) {           	
         final float centerX = mCenterImage.getWidth() / 2.0f; 
@@ -447,6 +507,14 @@ public class RightCornerView extends FrameLayout implements OnClickListener{
     
     public void setCenterImage(int centerId) {
         mCenterImage.setImageResource(centerId);
+    }
+    
+    public void setShowImageView() {
+//        mLeftImage.setVisibility(View.VISIBLE);
+//        mTopImage.setVisibility(View.VISIBLE);
+        mCenterImage.setVisibility(INVISIBLE);
+        mLeftImage.clearAnimation();
+        mTopImage.clearAnimation();
     }
     
     public void setMiddleImage(ArrayList<Integer> imageList) {
